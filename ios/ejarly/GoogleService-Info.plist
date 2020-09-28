@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>48413060075-nq66q0jo18gad8fhh2nqfqgf3vttpjgo.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.48413060075-nq66q0jo18gad8fhh2nqfqgf3vttpjgo</string>
+	<key>API_KEY</key>
+	<string>AIzaSyClzVhTPs1fG6qhzJ8c8bjAWWSc_q_r8Z4</string>
+	<key>GCM_SENDER_ID</key>
+	<string>48413060075</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.ejarly</string>
+	<key>PROJECT_ID</key>
+	<string>ejarly</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ejarly.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:48413060075:ios:1e1dfd5b3f9c694d1bc7ae</string>
+	<key>DATABASE_URL</key>
+	<string>https://ejarly.firebaseio.com</string>
+</dict>
+</plist>

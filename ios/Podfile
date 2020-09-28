@@ -1,0 +1,117 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+
+
+platform :ios, '10.0'
+
+
+target 'ejarly' do
+
+  rn_path = '../node_modules/react-native'
+  rn_maps_path = '../node_modules/react-native-maps'
+  # Pods for ejarly
+  pod 'React', :path => '../node_modules/react-native', :subspecs => [
+    'Core',
+    'CxxBridge',
+    'DevSupport',
+    'RCTActionSheet',
+    'RCTAnimation',
+    'RCTBlob',
+    'RCTGeolocation',
+    'RCTImage',
+    'RCTLinkingIOS',
+    'RCTNetwork',
+    'RCTSettings',
+    'RCTText',
+    'RCTVibration',
+    'RCTWebSocket',
+  ]
+
+  pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+
+  pod 'DoubleConversion', :podspec => '../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
+  pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
+  pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
+  pod 'RNGestureHandler', :podspec => '../node_modules/react-native-gesture-handler/RNGestureHandler.podspec'
+  pod 'RNReanimated', :podspec => '../node_modules/react-native-reanimated/RNReanimated.podspec'
+  # pod 'RNScreens', :path => '../node_modules/react-native-screens'
+  pod 'Firebase/Core', '~> 6.3.0'
+  pod 'Firebase/Messaging', '~> 6.3.0'
+  pod 'RNFirebase', :path => '../node_modules/react-native-firebase/ios'
+
+  pod 'react-native-splash-screen', :path => '../node_modules/react-native-splash-screen'
+
+
+  pod 'RNCAsyncStorage', :path => '../node_modules/@react-native-community/async-storage'
+
+  pod 'react-native-netinfo', :path => '../node_modules/@react-native-community/netinfo'
+
+  # pod 'react-native-image-picker', :path => '../node_modules/react-native-image-picker'
+
+  pod 'BVLinearGradient', :path => '../node_modules/react-native-linear-gradient'
+
+  # pod 'RNFastImage', :path => '../node_modules/react-native-fast-image'
+
+  pod 'RNI18n', :path => '../node_modules/react-native-i18n'
+
+  pod 'RNSnackbar', :path => '../node_modules/react-native-snackbar'
+  
+
+  pod 'react-native-maps', :path => '../node_modules/react-native-maps'
+   # react-native-maps dependencies
+  pod 'react-native-maps', path: rn_maps_path
+  pod 'react-native-google-maps', path: rn_maps_path  # Unomment this line if you want to support GoogleMaps on iOS
+  pod 'GoogleMaps'  # Uncomment this line if you want to support GoogleMaps on iOS
+  pod 'Google-Maps-iOS-Utils' # Uncomment this line if you want to support GoogleMaps on iOS
+
+  # pod '@mauron85_react-native-background-geolocation', :path => '../node_modules/@mauron85/react-native-background-geolocation'
+
+  # pod 'RNShare', :path => '../node_modules/react-native-share'
+
+  pod 'RNSound', :path => '../node_modules/react-native-sound'
+
+  pod 'react-native-fast-image', :path => '../node_modules/react-native-fast-image'
+
+  pod 'ReactNativeNavigation', :path => '../node_modules/react-native-navigation'
+
+  pod 'react-native-document-picker', :path => '../node_modules/react-native-document-picker'
+
+  pod 'RNAudioRecord', :path => '../node_modules/react-native-audio-record'
+
+  pod 'rn-fetch-blob', :path => '../node_modules/rn-fetch-blob'
+
+  pod 'react-native-progress-bar-android', :path => '../node_modules/@react-native-community/progress-bar-android'
+
+  pod 'react-native-progress-view', :path => '../node_modules/@react-native-community/progress-view'
+
+  pod 'react-native-pdf', :path => '../node_modules/react-native-pdf'
+
+  pod 'RNPDF', :path => '../node_modules/react-native-view-pdf'
+
+  pod 'react-native-viewpager', :path => '../node_modules/@react-native-community/viewpager'
+
+  pod 'react-native-geolocation-service', :path => '../node_modules/react-native-geolocation-service'
+
+  pod 'react-native-cameraroll', :path => '../node_modules/@react-native-community/cameraroll'
+
+  pod 'react-native-image-resizer', :path => '../node_modules/react-native-image-resizer'
+
+  post_install do |installer|
+    rnfirebase = installer.pods_project.targets.find { |target| target.name == 'RNFirebase' }
+    rnfirebase.build_configurations.each do |config|
+      config.build_settings['HEADER_SEARCH_PATHS'] = '$(inherited) ${PODS_ROOT}/Headers/Public/**'
+    end
+    installer.pods_project.targets.each do |target|
+      if target.name == 'react-native-google-maps'
+        target.build_configurations.each do |config|
+          config.build_settings['CLANG_ENABLE_MODULES'] = 'No'
+        end
+      end
+      if target.name == "React"
+        target.remove_from_project
+      end
+    end
+  end
+
+end

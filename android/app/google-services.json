@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "737745271316",
+    "firebase_url": "https://ejarly-d735c.firebaseio.com",
+    "project_id": "ejarly-d735c",
+    "storage_bucket": "ejarly-d735c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:737745271316:android:62638553ca479cdaac4501",
+        "android_client_info": {
+          "package_name": "com.ejarly"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "737745271316-5ja8akjnq5jfvmi97qub190evef29fn7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAB3-tphcotojhv9JOYra_dL1wPKBkMLjA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "737745271316-5ja8akjnq5jfvmi97qub190evef29fn7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
